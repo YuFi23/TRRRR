@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("img/background home.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .merk {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 80px auto;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Membuat lingkaran */
+    overflow: hidden; /* Memastikan hanya area lingkaran yang terlihat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Latar belakang area kosong */
+}
+
+.avatar img {
+    width: 100%; /* Gambar akan memenuhi lebar container */
+    height: 100%; /* Gambar akan memenuhi tinggi container */
+    object-fit: cover; /* Memastikan gambar proporsional tanpa distorsi */
+}
+/* Mengatur ukuran avatar di navbar */
+.navbar .user-avatarr img {
+    width: 40px; /* Menyesuaikan ukuran avatar */
+    height: 40px; /* Memastikan proporsi tetap sama */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    margin-right: 10px; /* Memberikan jarak antara gambar dan username */
+}
+/* Styling untuk avatar */
+.user-avatarr {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-avatarr img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.user-avatarr .dropdown-menu {
+    display: none; /* Sembunyikan menu dropdown secara default */
+    position: absolute;
+    top: 50px; /* Menyesuaikan posisi menu dropdown */
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-avatarr .dropdown-menu p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.user-avatarr .dropdown-menu .logout {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+.user-avatarr .dropdown-menu .logout:hover {
+    background-color: #555; /* Warna saat hover */
+}
+

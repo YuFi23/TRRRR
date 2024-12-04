@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.logo {
+    height: 50px;
+}
+
+.content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.image-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.event-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.event-info {
+    margin-top: 10px;
+}
+
+.form-section {
+    flex: 1;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.price-info {
+    margin: 10px 0;
+}
+
+
+
+.buy-button {
+    background-color: #9a8b8b;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #b73a3a;
+    transform: scale(1.05); 
+}

@@ -1,0 +1,112 @@
+/* Reset styling */
+body, h1, h2, ul, li, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.sidebar ul li {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    width: 100%;
+    background-color: #444;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sidebar ul li a.active {
+    background-color: #555;
+}
+
+.sidebar ul li a:hover {
+    background-color: #666;
+}
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+}
+
+.main-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f0f0f0;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+/* Tombol Logout di sidebar */
+.logout-btn {
+    display: block;
+    text-decoration: none;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}

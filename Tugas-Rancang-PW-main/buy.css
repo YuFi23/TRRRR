@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("img/b6c0cc3d04a8e2cc4b2e6a4b7144764b.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.merk {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: transparent;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+.concert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.concert-card {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.concert-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.concert-card button {
+    background-color: #f00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s;
+}
+
+.concert-card button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.concert-card button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.concert-card button:hover span {
+    padding-right: 25px;
+}
+
+.concert-card button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.navbar .user-avatarr img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.user-avatarr {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-avatarr .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-avatarr .dropdown-menu p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.user-avatarr .dropdown-menu .logout {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+.user-avatarr .dropdown-menu .logout:hover {
+    background-color: #555;
+}

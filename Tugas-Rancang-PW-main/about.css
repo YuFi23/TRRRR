@@ -1,0 +1,211 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.merk {
+    color: white; 
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 50px; 
+}
+
+body {
+    background-image: url("img/b6c0cc3d04a8e2cc4b2e6a4b7144764b.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none; 
+}
+
+.menu-icon {
+    display: none; 
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: transparent;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex; 
+    }
+
+    .menu-icon {
+        display: block; 
+    }
+
+    .nav-links li {
+        width: 100%; 
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+
+.about-section {
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px 20px;
+    margin-top: 30px;
+    margin: 30px auto; 
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1000px; 
+    
+}
+
+.about-section p {
+    line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+    .about-section {
+        font-size: 16px; 
+        padding: 15px; 
+    }
+
+    .nav-links {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .merk {
+        margin-bottom: 10px; 
+    }
+
+    .navbar {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        font-size: 14px; 
+        padding: 10px; 
+    }
+
+    .navbar {
+        padding: 10px; 
+    }
+
+    .nav-links {
+        gap: 5px; 
+    }
+
+    .nav-links a {
+        padding: 8px 10px; 
+        font-size: 14px;
+    }
+
+    .merk {
+        font-size: 20px;
+    }
+}
+/* Mengatur ukuran avatar di navbar */
+.navbar .user-avatarr img {
+    width: 40px; /* Menyesuaikan ukuran avatar */
+    height: 40px; /* Memastikan proporsi tetap sama */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    margin-right: 10px; /* Memberikan jarak antara gambar dan username */
+}
+.user-avatarr {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-avatarr img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.user-avatarr .dropdown-menu {
+    display: none; /* Sembunyikan menu dropdown secara default */
+    position: absolute;
+    top: 50px; /* Menyesuaikan posisi menu dropdown */
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-avatarr .dropdown-menu p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.user-avatarr .dropdown-menu .logout {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+.user-avatarr .dropdown-menu .logout:hover {
+    background-color: #555; /* Warna saat hover */
+}

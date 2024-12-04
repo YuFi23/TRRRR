@@ -1,0 +1,276 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("img/background home.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Navbar */
+.navbar {
+background-color: #333;
+padding: 15px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+transition: background-color 0.3s ease; /* Transisi untuk perubahan warna */
+}
+
+.navbar.transparent {
+background-color: rgba(51, 51, 51, 0.5); /* Warna transparan */
+}
+
+.merk {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+.menu-toggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Welcome Section */
+.welcome {
+color: #705C53;
+text-align: center;
+font-size: 3em;
+font-weight: bold;
+margin-top: 100px; /* Memberikan jarak dari navbar */
+margin-bottom: 50px; /* Jarak ke section berikutnya */
+}
+.logo3 {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Order Button */
+.order-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.order {
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    padding: 15px 30px;
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease-in-out;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.order:hover {
+    background: #292929;
+    border-color: #666;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* About Section */
+.about-section {
+font-size: 18px;
+background-color: rgba(255, 255, 255, 0.8);
+padding: 20px;
+margin: 50px auto; /* Jarak atas dan bawah antar section */
+border-radius: 20px;
+width: 90%;
+max-width: 1000px;
+}
+.about-section p {
+    line-height: 1.6;
+}
+
+/* Card Container */
+.card-container {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+margin-top: 50px; /* Jarak atas untuk memberikan space */
+margin-bottom: 50px; /* Jarak bawah ke section berikutnya */
+}
+.card {
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto 10px;
+}
+
+/* Scroll Animation */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .welcome {
+        font-size: 2.5em;
+    }
+    .about-section {
+        font-size: 16px;
+    }
+    .order {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .welcome {
+        font-size: 2em;
+    }
+    .about-section {
+        font-size: 14px;
+    }
+    .order {
+        font-size: 1.2rem;
+    }
+}
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Membuat lingkaran */
+    overflow: hidden; /* Memastikan hanya area lingkaran yang terlihat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Latar belakang area kosong */
+}
+
+.avatar img {
+    width: 100%; /* Gambar akan memenuhi lebar container */
+    height: 100%; /* Gambar akan memenuhi tinggi container */
+    object-fit: cover; /* Memastikan gambar proporsional tanpa distorsi */
+}
+/* Mengatur ukuran avatar di navbar */
+.navbar .user-avatarr img {
+    width: 40px; /* Menyesuaikan ukuran avatar */
+    height: 40px; /* Memastikan proporsi tetap sama */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    margin-right: 10px; /* Memberikan jarak antara gambar dan username */
+}
+/* Styling untuk avatar */
+.user-avatarr {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-avatarr img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.user-avatarr .dropdown-menu {
+    display: none; /* Sembunyikan menu dropdown secara default */
+    position: absolute;
+    top: 50px; /* Menyesuaikan posisi menu dropdown */
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-avatarr .dropdown-menu p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.user-avatarr .dropdown-menu .logout {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+.user-avatarr .dropdown-menu .logout:hover {
+    background-color: #555; /* Warna saat hover */
+}
+
